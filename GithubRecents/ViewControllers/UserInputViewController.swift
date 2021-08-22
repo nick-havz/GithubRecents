@@ -111,9 +111,12 @@ class UserInputViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == SHOW_RESULTS_SEGUE_IDENTIFIER){
+            self.setView(state: .normal)
             guard let commits = sender as? [Commit] else{
                 return
             }
+            let resultsView = segue.destination as! CommitResultsViewController
+            resultsView.commits = commits
             
         }
     }

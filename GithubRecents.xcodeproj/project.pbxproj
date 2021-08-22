@@ -20,6 +20,9 @@
 		0195B57B26D1E0AE006E8FD3 /* GithubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195B57A26D1E0AE006E8FD3 /* GithubAPITests.swift */; };
 		0195B57D26D1E220006E8FD3 /* github_api_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0195B57C26D1E220006E8FD3 /* github_api_sample.json */; };
 		0195B58026D1E824006E8FD3 /* UserInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195B57F26D1E824006E8FD3 /* UserInputViewController.swift */; };
+		0195B58226D1F971006E8FD3 /* CommitResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195B58126D1F971006E8FD3 /* CommitResultsViewController.swift */; };
+		0195B58626D1FABD006E8FD3 /* CommitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195B58426D1FABD006E8FD3 /* CommitTableViewCell.swift */; };
+		0195B58726D1FABD006E8FD3 /* CommitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0195B58526D1FABD006E8FD3 /* CommitTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		0195B57A26D1E0AE006E8FD3 /* GithubAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPITests.swift; sourceTree = "<group>"; };
 		0195B57C26D1E220006E8FD3 /* github_api_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_api_sample.json; sourceTree = "<group>"; };
 		0195B57F26D1E824006E8FD3 /* UserInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputViewController.swift; sourceTree = "<group>"; };
+		0195B58126D1F971006E8FD3 /* CommitResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitResultsViewController.swift; sourceTree = "<group>"; };
+		0195B58426D1FABD006E8FD3 /* CommitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitTableViewCell.swift; sourceTree = "<group>"; };
+		0195B58526D1FABD006E8FD3 /* CommitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 		0195B53E26D1B359006E8FD3 /* GithubRecents */ = {
 			isa = PBXGroup;
 			children = (
+				0195B58326D1FAA4006E8FD3 /* Views */,
 				0195B57E26D1E7F5006E8FD3 /* ViewControllers */,
 				0195B56F26D1BBD3006E8FD3 /* API */,
 				0195B53F26D1B359006E8FD3 /* AppDelegate.swift */,
@@ -155,8 +162,18 @@
 			isa = PBXGroup;
 			children = (
 				0195B57F26D1E824006E8FD3 /* UserInputViewController.swift */,
+				0195B58126D1F971006E8FD3 /* CommitResultsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0195B58326D1FAA4006E8FD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0195B58426D1FABD006E8FD3 /* CommitTableViewCell.swift */,
+				0195B58526D1FABD006E8FD3 /* CommitTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0195B58726D1FABD006E8FD3 /* CommitTableViewCell.xib in Resources */,
 				0195B54C26D1B35A006E8FD3 /* LaunchScreen.storyboard in Resources */,
 				0195B54926D1B35A006E8FD3 /* Assets.xcassets in Resources */,
 				0195B54726D1B359006E8FD3 /* Main.storyboard in Resources */,
@@ -290,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0195B58626D1FABD006E8FD3 /* CommitTableViewCell.swift in Sources */,
 				0195B57926D1D6DF006E8FD3 /* Schema.swift in Sources */,
 				0195B54026D1B359006E8FD3 /* AppDelegate.swift in Sources */,
+				0195B58226D1F971006E8FD3 /* CommitResultsViewController.swift in Sources */,
 				0195B54226D1B359006E8FD3 /* SceneDelegate.swift in Sources */,
 				0195B57126D1BC51006E8FD3 /* GithubAPI.swift in Sources */,
 				0195B58026D1E824006E8FD3 /* UserInputViewController.swift in Sources */,
