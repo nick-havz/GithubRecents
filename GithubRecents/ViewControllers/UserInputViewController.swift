@@ -102,6 +102,15 @@ class UserInputViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
+        if (maxCommits < 25){
+            debugPrint("max commits are less than 25 which is a requirement")
+            let alert = UIAlertController(title: "Ooops", message: "Minimum commit count should be 25 or more", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                self.maxCommitsTextField.text = ""
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         
         setView(state: .loading)
         
