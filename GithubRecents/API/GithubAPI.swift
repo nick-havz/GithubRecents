@@ -33,9 +33,9 @@ class GithubAPI {
     /// - Parameter limit: The max results (default: 100, max: 100)
     /// - Parameter onComplete: The callback to execute after request
     func getCommits(user : String, repo : String, limit: Int, onComplete : @escaping (_ : GetCommitsResponse) -> Void){
-        guard let requestURL = URL(string: "\(self.endpoint)/repos/\(user)/\(repo)/commits") else {
+        guard let requestURL = URL(string: "\(self.endpoint)/repos/\(user)/\(repo)/commits?per_page=\(limit)") else {
             //we were unable to create the URL from the string - return an error and break
-            debugPrint("failed to create URL from string: \(self.endpoint)/repos/\(user)/\(repo)/commits)")
+            debugPrint("failed to create URL from string: \(self.endpoint)/repos/\(user)/\(repo)/commits?per_page=\(limit)")
             onComplete(GetCommitsResponse(error: APIError.malformedURL, commits: nil))
             return
         }
